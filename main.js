@@ -4,9 +4,9 @@ const element = document.getElementById("message");
 const costoPerKm = 0.21;
 let message = "";
 let btn = document.querySelector("#bottoneGenera")
-
-document.querySelector("#nomeCognome").value
-
+let risultato = document.getElementById("#risultato")
+let valore = document.querySelector("#nomeCognome")
+let nomeDellUtente = document.getElementById("nomeDellUtente")
 
 
 if( Number.isFinite(age) && Number.isFinite(distance) ) {
@@ -34,5 +34,6 @@ element.innerHTML = message;
 btn.addEventListener("click", function() {
     //Questo codice verrà eseguito solo quando l'utente cliccherà sul button
     //E mostrerà il valore che abbiamo nell'input IN QUEL MOMENTO
-    element.innerHTML = risultato ("nome utente: " + input.value);
+    risultato = ("nome utente: " + valore.value);
+    nomeDellUtente.innerHTML = risultato
 });
